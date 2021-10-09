@@ -8,13 +8,13 @@ export const loginStyle = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "#D8BFD8"
+    backgroundColor: "#9932CC"
   },
   view: {
     width: "80%",
   },
   cardTitle: {
-    color: "#EE82EE",
+    color: "#9932CC",
   },
   cardButton: {
     margin: 2,

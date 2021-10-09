@@ -4,7 +4,15 @@ import { Appbar,Button,TextInput } from "react-native-paper";
 import { HeaderComponent } from "../../components/header/header.component";
 import { registerStyle } from "./register.style";
 
-export const RegisterScreen = () => {
+interface RegisterScreenProps {
+  navigation: any;
+}
+
+
+const RegisterScreen = (props: RegisterScreenProps) => {
+
+  const register = () => props.navigation.navigate("home")
+
   return (
     <SafeAreaView>
       <ScrollView>
@@ -15,10 +23,14 @@ export const RegisterScreen = () => {
           <TextInput label="Senha" secureTextEntry={true} right={<TextInput.Icon name="eye" color={registerStyle.icon.color}/>}/> 
           <TextInput label="Confirmar Senha" secureTextEntry={true} right={<TextInput.Icon name="eye" color={registerStyle.icon.color}/>}/>
           <TextInput label="Telefone" keyboardType="phone-pad"/>
-          <Button mode="contained" style={registerStyle.button}>Registrar</Button>
+          <Button mode="contained" style={registerStyle.button} onPress={register}>Registrar</Button>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 
 }
+
+export default RegisterScreen;
+
+// TODO VIDEO MIN 08:00
